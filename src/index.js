@@ -1,7 +1,7 @@
 const app = require('express')();
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const comments_router = require('./routes/comments');
 const store_router = require('./routes/stores')
 app.use(cors())
