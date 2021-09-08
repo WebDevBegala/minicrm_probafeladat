@@ -1,7 +1,7 @@
 const { Schema } = require('mongoose');
 const mongodb = require('../connect')
 const storeDetail = new Schema({
-    id: String,
+    id: Number,
     title: String,
     description: String,
     mobile: String,
