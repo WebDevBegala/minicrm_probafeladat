@@ -4,13 +4,13 @@ import Home from '../screens/Home.vue'
 
 const routes = [
   {
-    path: '/:id',
+    path: '/',
     beforeEnter: (to, from, next) => {
-     const { id } = to.params;
-     store.commit('setStoreId',id)
-     store.dispatch('fetchStore',{id})
-     store.dispatch('fetchComments',{id})
-     next()
+      const id = '12345'
+      store.commit('setStoreId', id)
+      store.dispatch('fetchStore', { id })
+      store.dispatch('fetchComments', { id })
+      next()
     },
     name: 'Home',
     component: Home
